@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunucu IP Kop626626yalama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.7); /* Yarı saydam beyaz */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .ip-address {
+            font-size: 20px;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .button {
+            padding: 15px 30px;
+            background-color: rgba(76, 175, 80, 0.8); /* Saydam yeşil */
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            opacity: 0.9; /* Saydamlık */
+        }
+        .button:hover {
+            background-color: rgba(76, 175, 80, 1); /* Tam opaklık */
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+            display: none;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            // Sunucu IP'si
+            var ip = "GangCheats.aternos.me:14896"; // Belirtilen sunucu IP'si
+            // Geçici bir input elemanı oluştur
+            var tempInput = document.createElement("input");
+            tempInput.value = ip;
+            document.body.appendChild(tempInput);
+            // Seç ve kopyala
+            tempInput.select();
+            document.execCommand("copy");
+            // Geçici inputu kaldır
+            document.body.removeChild(tempInput);
+            // Kullanıcıya mesaj göster
+            var message = document.getElementById("message");
+            message.style.display = "block";
+            message.textContent = "Sunucu IP'si kopyalandı: " + ip;
+        }
+    </script>
+</head>
+<body>
+    <button class="button" onclick="copyToClipboard()">IP'yi Kopyala
+        <h1>Gang Cheats Network Sunucu IP Kopyala</h1>
+        <div class="ip-address">GangCheats.aternos.me:14896</div>
+
+        <div id="message" class="message"></div>
+    </button>
+</body>
+</html>
